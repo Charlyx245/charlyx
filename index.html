@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Flotante + Mirror en Iframe</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <iframe id="backgroundIframe" src="https://gana365.online"></iframe>
+    <button class="chat-button" onclick="toggleChat()">💬</button>
+    <div class="chat-container" id="chatBox">
+        <div id="chatHeader" class="chat-header" style="display: none;">
+            <img src="https://gana365.online/images/logo.png" alt="Logo de la Empresa" class="chat-logo">
+            <span class="chat-phone">Soporte: +54 9 11 5412-8983</span>
+            <button onclick="toggleChat()" class="close-chat">✖</button>
+        </div>
+        <div class="login-container" id="loginForm">
+            <h3>Bienvenido</h3>
+            <img src="https://gana365.online/images/logo.png" alt="Logo de la Empresa" class="login-logo">
+            <input type="text" id="username" placeholder="Ingrese su usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button onclick="login()" class="login-button">Iniciar Chat</button>
+        </div>
+        <iframe id="chatIframe" class="chat-iframe" src=""></iframe>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
